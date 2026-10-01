@@ -1,0 +1,19 @@
+package com.guvault.services;
+
+public class NotificationService extends Thread {
+    private String studentEmail;
+    private String message;
+
+    public NotificationService(String email, String message) {
+        this.studentEmail = email;
+        this.message = message;
+    }
+
+    @Override
+    public void run() {
+        synchronized(this) {
+            System.out.println("Sending async fee receipt to: " + studentEmail);
+            System.out.println("Message: " + message);
+        }
+    }
+}

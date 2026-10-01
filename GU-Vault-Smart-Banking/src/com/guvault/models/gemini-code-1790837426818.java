@@ -1,0 +1,11 @@
+package com.guvault.models;
+
+public abstract class Account {
+    protected double balance;
+    
+    public abstract void payUniversityDues(double amount);
+    
+    public double getBalance() {
+        return balance;
+    }
+}

@@ -1,0 +1,14 @@
+package com.guvault.models;
+
+public class StudentAccount extends Account {
+    
+    public StudentAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    @Override
+    public void payUniversityDues(double amount) {
+        this.balance -= amount; 
+        System.out.println("Paid Galgotias dues. Remaining balance: " + this.balance);
+    }
+}
